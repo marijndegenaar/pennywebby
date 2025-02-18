@@ -20,12 +20,12 @@
     "vue3-touch-events": "^4.2.0"
   },
   "devDependencies": {
-    "@nuxtjs/prismic": "^3.4.3",
-    "@slicemachine/adapter-nuxt": "^0.3.51",
+    "@nuxtjs/prismic": "^4.0.0",
+    "@slicemachine/adapter-nuxt": "^0.3.66",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.47",
     "sass": "^1.80.5",
-    "slice-machine-ui": "^2.8.1",
+    "slice-machine-ui": "^2.12.3",
     "vite-plugin-pug": "^0.4.1"
   }
 }

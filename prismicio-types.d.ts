@@ -279,7 +279,7 @@ type TextDocumentDataSlicesSlice = ArticleSlice;
  */
 interface TextDocumentData {
   /**
-   * Veröffentlichungsdatum field in *Text*
+   * Publishing Date field in *Text*
    *
    * - **Field Type**: Date
    * - **Placeholder**: *None*
@@ -290,7 +290,7 @@ interface TextDocumentData {
   date: prismic.DateField;
 
   /**
-   * Titel field in *Text*
+   * Title field in *Text*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -301,7 +301,7 @@ interface TextDocumentData {
   title: prismic.KeyTextField;
 
   /**
-   * Untertitel field in *Text*
+   * Subtitle field in *Text*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -310,6 +310,28 @@ interface TextDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   subtitle: prismic.KeyTextField;
+
+  /**
+   * Featured Image field in *Text*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text.featured_image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  featured_image: prismic.ImageField<never>;
+
+  /**
+   * Content field in *Text*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text.content
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  content: prismic.RichTextField;
 
   /**
    * Slice Zone field in *Text*

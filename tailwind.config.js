@@ -29,6 +29,8 @@ module.exports = {
       base: "1rem",
       lg: "1.125rem",
       xl: "1.5rem",
+      xxl: "2rem",
+      xxxl: "2.5rem"
       // 'h1': ['51px', { lineHeight: '100%', letterSpacing: '-0.02em' }],
     },
 

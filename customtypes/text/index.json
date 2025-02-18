@@ -15,22 +15,39 @@
       "date": {
         "type": "Date",
         "config": {
-          "label": "Veröffentlichungsdatum",
+          "label": "Publishing Date",
           "placeholder": ""
         }
       },
       "title": {
         "type": "Text",
         "config": {
-          "label": "Titel",
+          "label": "Title",
           "placeholder": ""
         }
       },
       "subtitle": {
         "type": "Text",
         "config": {
-          "label": "Untertitel",
+          "label": "Subtitle",
           "placeholder": ""
+        }
+      },
+      "featured_image": {
+        "type": "Image",
+        "config": {
+          "label": "Featured Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "content": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Content",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,heading1,heading2,heading3,strong,em,hyperlink,image,embed,list-item,o-list-item"
         }
       },
       "slices": {

@@ -4,11 +4,11 @@
         h1 Penny's Website
     #main-menu.flex.justify-center.text-center
         .menu-item.px-3    
-            nuxt-link(to="/texten") Texte
+            nuxt-link(to="/texten") Words
         .menu-item.px-3
-            nuxt-link(to="/fotografie") Fotografie
+            nuxt-link(to="/fotografie") Wandering
         .menu-item.px-3
-            nuxt-link(to="/uber").ueber Über
+            nuxt-link(to="/uber").ueber Penny
 </template>
 
 <script setup>

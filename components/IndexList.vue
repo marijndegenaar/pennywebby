@@ -4,10 +4,10 @@
     .items-container.w-full(:class="{ 'md_w-5x6': contentType === 'fotografie', 'md_3x6 lg_w-4x6': contentType !== 'fotografie' }").flex.flex-wrap  
         .content-item.w-full.mb-8.sm_px-2.lg_px-4(:class="{ 'sm_w-1x2 lg_w-1x3': contentType === 'fotografie' }" v-for="item in filteredItems" :key="item.id")
             nuxt-link(:to="`/${contentType}/${item.uid}`")
-              PrismicImage(v-if="item.data.featured_image" :field="item.data.featured_image").w-full.aspect-3x2.object-cover
+              PrismicImage(v-if="item.data.featured_image" :field="item.data.featured_image").w-1x5.object-cover.absolute.right-0.featured_image
             nuxt-link(:to="`/${contentType}/${item.uid}`")
-              h2.text-normal.font-medium.mt-1 {{ item.data.title }}
-              .subtitle.text-sm {{ item.data.subtitle }}
+              h2.text-xl.font-medium.mt-1 {{ item.data.title }}
+              .subtitle.text-sm {{ new Date(item.data.date).getFullYear() }} — {{ item.data.subtitle }}
 </template>
 
 <script setup>
@@ -57,5 +57,11 @@ a:hover h2
   text-decoration-color: #6E5F3940
   text-decoration-thickness: 2px
 
-
+.content-item 
+  transition: all 0.5s ease-out
+  .featured_image
+    display: none
+  &:hover
+    .featured_image
+      display: block
 </style>
