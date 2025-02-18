@@ -1,0 +1,28 @@
+{
+  "id": "article",
+  "type": "SharedSlice",
+  "name": "Article",
+  "description": "Article",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "article_content": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Article Content",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,heading1,heading2,heading3,strong,em,hyperlink,image,embed,list-item,o-list-item"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

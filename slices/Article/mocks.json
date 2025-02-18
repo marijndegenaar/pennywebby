@@ -1,0 +1,20 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"article_content": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Id cupidatat id do dolore incididunt eiusmod proident in veniam. In ipsum adipisicing proident consequat nisi nostrud laboris proident consequat et minim sit sint culpa."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]
