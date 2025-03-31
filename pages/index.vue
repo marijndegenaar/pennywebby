@@ -1,6 +1,9 @@
 <template lang="pug">
-  .w-full.md_w-8x12.mx-auto.mt-4
-    prismic-rich-text(:field="homedata[0].data.homepage_text").text-lg
+  .background.w-screen.h-screen.fixed.top-0.left-0.z-0
+    img(src='assets/images/pennyBG.jpg').w-full.h-full.object-contain
+
+  //- .w-full.md_w-8x12.mx-auto.mt-4
+  //-   prismic-rich-text(:field="homedata[0].data.homepage_text").text-lg
   </template>
   
   <script setup>

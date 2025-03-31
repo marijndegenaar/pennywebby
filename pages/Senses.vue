@@ -1,5 +1,6 @@
 <template lang="pug">
-    IndexList(contentType="fotografie")
+    h1 Senses
+    IndexList(contentType="senses")
 </template>
 
 <script setup>

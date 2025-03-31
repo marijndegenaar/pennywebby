@@ -87,93 +87,82 @@ interface AboutDocumentData {
 export type AboutDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithoutUID<Simplify<AboutDocumentData>, "about", Lang>;
 
-type FotografieDocumentDataSlicesSlice = GallerySlice;
+type DreamsDocumentDataSlicesSlice = never;
 
 /**
- * Content for Fotografie documents
+ * Content for Dreams documents
  */
-interface FotografieDocumentData {
+interface DreamsDocumentData {
   /**
-   * Titel field in *Fotografie*
+   * Title field in *Dreams*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: fotografie.title
+   * - **API ID Path**: dreams.title
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   title: prismic.KeyTextField;
 
   /**
-   * Beschreibung field in *Fotografie*
+   * Publishing date field in *Dreams*
+   *
+   * - **Field Type**: Date
+   * - **Placeholder**: *None*
+   * - **API ID Path**: dreams.date
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#date
+   */
+  date: prismic.DateField;
+
+  /**
+   * Content field in *Dreams*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: fotografie.description
+   * - **API ID Path**: dreams.content
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  description: prismic.RichTextField;
+  content: prismic.RichTextField;
 
   /**
-   * Titelbild field in *Fotografie*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: fotografie.featured_image
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  featured_image: prismic.ImageField<never>;
-
-  /**
-   * Untertitel field in *Fotografie*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: fotografie.subtitle
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  subtitle: prismic.KeyTextField;
-
-  /**
-   * Slice Zone field in *Fotografie*
+   * Slice Zone field in *Dreams*
    *
    * - **Field Type**: Slice Zone
    * - **Placeholder**: *None*
-   * - **API ID Path**: fotografie.slices[]
+   * - **API ID Path**: dreams.slices[]
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#slices
    */
-  slices: prismic.SliceZone<FotografieDocumentDataSlicesSlice> /**
-   * Meta Title field in *Fotografie*
+  slices: prismic.SliceZone<DreamsDocumentDataSlicesSlice> /**
+   * Meta Title field in *Dreams*
    *
    * - **Field Type**: Text
    * - **Placeholder**: A title of the page used for social media and search engines
-   * - **API ID Path**: fotografie.meta_title
+   * - **API ID Path**: dreams.meta_title
    * - **Tab**: SEO & Metadata
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */;
   meta_title: prismic.KeyTextField;
 
   /**
-   * Meta Description field in *Fotografie*
+   * Meta Description field in *Dreams*
    *
    * - **Field Type**: Text
    * - **Placeholder**: A brief summary of the page
-   * - **API ID Path**: fotografie.meta_description
+   * - **API ID Path**: dreams.meta_description
    * - **Tab**: SEO & Metadata
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   meta_description: prismic.KeyTextField;
 
   /**
-   * Meta Image field in *Fotografie*
+   * Meta Image field in *Dreams*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: fotografie.meta_image
+   * - **API ID Path**: dreams.meta_image
    * - **Tab**: SEO & Metadata
    * - **Documentation**: https://prismic.io/docs/field#image
    */
@@ -181,20 +170,16 @@ interface FotografieDocumentData {
 }
 
 /**
- * Fotografie document from Prismic
+ * Dreams document from Prismic
  *
- * - **API ID**: `fotografie`
+ * - **API ID**: `dreams`
  * - **Repeatable**: `true`
  * - **Documentation**: https://prismic.io/docs/custom-types
  *
  * @typeParam Lang - Language API ID of the document.
  */
-export type FotografieDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithUID<
-    Simplify<FotografieDocumentData>,
-    "fotografie",
-    Lang
-  >;
+export type DreamsDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<Simplify<DreamsDocumentData>, "dreams", Lang>;
 
 type HomepageDocumentDataSlicesSlice = never;
 
@@ -271,6 +256,67 @@ export type HomepageDocument<Lang extends string = string> =
     "homepage",
     Lang
   >;
+
+type SensesDocumentDataSlicesSlice = never;
+
+/**
+ * Content for Senses documents
+ */
+interface SensesDocumentData {
+  /**
+   * Slice Zone field in *Senses*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: senses.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<SensesDocumentDataSlicesSlice> /**
+   * Meta Title field in *Senses*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: senses.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *Senses*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: senses.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *Senses*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: senses.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * Senses document from Prismic
+ *
+ * - **API ID**: `senses`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type SensesDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<Simplify<SensesDocumentData>, "senses", Lang>;
 
 type TextDocumentDataSlicesSlice = ArticleSlice;
 
@@ -390,8 +436,9 @@ export type TextDocument<Lang extends string = string> =
 
 export type AllDocumentTypes =
   | AboutDocument
-  | FotografieDocument
+  | DreamsDocument
   | HomepageDocument
+  | SensesDocument
   | TextDocument;
 
 /**
@@ -554,12 +601,15 @@ declare module "@prismicio/client" {
       AboutDocument,
       AboutDocumentData,
       AboutDocumentDataSlicesSlice,
-      FotografieDocument,
-      FotografieDocumentData,
-      FotografieDocumentDataSlicesSlice,
+      DreamsDocument,
+      DreamsDocumentData,
+      DreamsDocumentDataSlicesSlice,
       HomepageDocument,
       HomepageDocumentData,
       HomepageDocumentDataSlicesSlice,
+      SensesDocument,
+      SensesDocumentData,
+      SensesDocumentDataSlicesSlice,
       TextDocument,
       TextDocumentData,
       TextDocumentDataSlicesSlice,

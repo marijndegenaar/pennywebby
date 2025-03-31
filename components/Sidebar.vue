@@ -1,5 +1,5 @@
 <template lang="pug">
-#sidebar.text-sm.md_pt-2.flex.md_block
+#sidebar.text-sm
     .sidebar-item.capitalize.mx-2.md_mr-4.md_mb-1(v-for="tag in ['Alle', ...tags]" :key="tag").text-light-brown
         label(:class="{ 'text-brown': selectedTags === tag || (tag === 'Alle' && selectedTags === '') }")
             input(type="checkbox" :value="tag" v-model="selectedTags" @change="updateFilter(tag)" ).hidden

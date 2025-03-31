@@ -1,6 +1,7 @@
 <template lang="pug">
 #content-list.md_flex
-    Sidebar(:tags="tags" @filter-changed="applyFilter" :contentType="contentType").md_w-1x6.mb-4.sticky.top-5.pt-2.pb-2.md_pt-0.md_max-h-screen.bg-white.justify-center
+    Sidebar(:tags="tags" @filter-changed="applyFilter" :contentType="contentType").md_w-1x6.top-2.left-2.h-screen.flex.flex-col.fixed.justify-center
+    .spacer.w-1x5.text-white .
     .items-container.w-full(:class="{ 'md_w-5x6': contentType === 'fotografie', 'md_3x6 lg_w-4x6': contentType !== 'fotografie' }").flex.flex-wrap  
         .content-item.w-full.mb-8.sm_px-2.lg_px-4(:class="{ 'sm_w-1x2 lg_w-1x3': contentType === 'fotografie' }" v-for="item in filteredItems" :key="item.id")
             nuxt-link(:to="`/${contentType}/${item.uid}`")

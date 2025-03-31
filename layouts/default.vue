@@ -1,5 +1,6 @@
 <template lang="pug">
-Header.mt-4.md_mt-8.mb-4.md_mb-10.relative
+Header
+//- BouncyHeader
 #layout.default.p-2.md_p-4.lg_container.lg_mx-auto
     //- .container.m-auto
     slot
