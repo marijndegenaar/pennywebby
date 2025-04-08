@@ -33,6 +33,17 @@
           "placeholder": ""
         }
       },
+      "url": {
+        "type": "Link",
+        "config": {
+          "label": "URL",
+          "placeholder": "",
+          "select": null,
+          "allowTargetBlank": true,
+          "allowText": true,
+          "repeat": false
+        }
+      },
       "featured_image": {
         "type": "Image",
         "config": {

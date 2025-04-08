@@ -358,6 +358,17 @@ interface TextDocumentData {
   subtitle: prismic.KeyTextField;
 
   /**
+   * URL field in *Text*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text.url
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  url: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+
+  /**
    * Featured Image field in *Text*
    *
    * - **Field Type**: Image

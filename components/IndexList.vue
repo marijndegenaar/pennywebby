@@ -3,12 +3,15 @@
     Sidebar(:tags="tags" @filter-changed="applyFilter" :contentType="contentType").md_w-1x6.top-2.left-2.h-screen.flex.flex-col.fixed.justify-center
     .spacer.w-1x5.text-white .
     .items-container.w-full(:class="{ 'md_w-5x6': contentType === 'fotografie', 'md_3x6 lg_w-4x6': contentType !== 'fotografie' }").flex.flex-wrap  
-        .content-item.w-full.mb-8.sm_px-2.lg_px-4(:class="{ 'sm_w-1x2 lg_w-1x3': contentType === 'fotografie' }" v-for="item in filteredItems" :key="item.id")
-            nuxt-link(:to="`/${contentType}/${item.uid}`")
-              PrismicImage(v-if="item.data.featured_image" :field="item.data.featured_image").w-1x5.object-cover.absolute.right-0.featured_image
-            nuxt-link(:to="`/${contentType}/${item.uid}`")
-              h2.text-xl.font-medium.mt-1 {{ item.data.title }}
-              .subtitle.text-sm {{ new Date(item.data.date).getFullYear() }} — {{ item.data.subtitle }}
+      .content-item.w-full.mb-8.sm_px-2.lg_px-4(v-for="item in filteredItems" :key="item.id")
+          nuxt-link(:to="`/${contentType}/${item.uid}`")
+            PrismicImage(v-if="item.data.featured_image" :field="item.data.featured_image").w-1x5.object-cover.absolute.right-0.featured_image
+          nuxt-link(:to="item.data.url.url ? item.data.url.url : `/${contentType}/${item.uid}`" :target="item.data.url.target" )
+            h2.text-xl.font-medium.mt-1 
+              span.title {{ item.data.title }}
+              .link-text.inline.ml-2.text-xs(v-if="item.data.url.url") 🔗 {{ item.data.url.text }}
+              .link-url.inline.ml-2.text-xs.hidden(v-if="item.data.url.url") 🔗 {{ item.data.url.url }}
+            .subtitle.text-sm {{ new Date(item.data.date).getFullYear() }} — {{ item.data.subtitle }}
 </template>
 
 <script setup>
@@ -52,7 +55,7 @@ items.value.forEach(item => {
 </script>
 
 <style lang="sass" scoped>
-a:hover h2
+a:hover h2 span.title
   text-decoration: underline
   text-underline-offset: 6px
   text-decoration-color: #6E5F3940
@@ -65,4 +68,9 @@ a:hover h2
   &:hover
     .featured_image
       display: block
+    .link-text  
+      display: none
+    .link-url
+      display: inline
+  
 </style>
