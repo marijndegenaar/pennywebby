@@ -4,7 +4,7 @@
         img(src='assets/images/penny_header.png')
     #main-menu.flex.justify-between.text-center.fixed.w-full.p-4
         .menu-item.px-3    
-            nuxt-link(to="/texten") 
+            nuxt-link(to="/words") 
                 img(src='assets/images/btn_words.svg')
                 .desc Words
         .menu-item.px-3
