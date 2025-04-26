@@ -321,11 +321,11 @@ export type SensesDocument<Lang extends string = string> =
 type TextDocumentDataSlicesSlice = ArticleSlice;
 
 /**
- * Content for Text documents
+ * Content for Words documents
  */
 interface TextDocumentData {
   /**
-   * Publishing Date field in *Text*
+   * Publishing Date field in *Words*
    *
    * - **Field Type**: Date
    * - **Placeholder**: *None*
@@ -336,7 +336,7 @@ interface TextDocumentData {
   date: prismic.DateField;
 
   /**
-   * Title field in *Text*
+   * Title field in *Words*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -347,7 +347,7 @@ interface TextDocumentData {
   title: prismic.KeyTextField;
 
   /**
-   * Subtitle field in *Text*
+   * Subtitle field in *Words*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -358,7 +358,7 @@ interface TextDocumentData {
   subtitle: prismic.KeyTextField;
 
   /**
-   * URL field in *Text*
+   * URL field in *Words*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
@@ -369,7 +369,7 @@ interface TextDocumentData {
   url: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
 
   /**
-   * Featured Image field in *Text*
+   * Featured Image field in *Words*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
@@ -380,7 +380,19 @@ interface TextDocumentData {
   featured_image: prismic.ImageField<never>;
 
   /**
-   * Content field in *Text*
+   * Text is Chinese field in *Words*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: text.text_is_chinese
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#boolean
+   */
+  text_is_chinese: prismic.BooleanField;
+
+  /**
+   * Content field in *Words*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
@@ -391,7 +403,7 @@ interface TextDocumentData {
   content: prismic.RichTextField;
 
   /**
-   * Slice Zone field in *Text*
+   * Slice Zone field in *Words*
    *
    * - **Field Type**: Slice Zone
    * - **Placeholder**: *None*
@@ -400,7 +412,7 @@ interface TextDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#slices
    */
   slices: prismic.SliceZone<TextDocumentDataSlicesSlice> /**
-   * Meta Title field in *Text*
+   * Meta Title field in *Words*
    *
    * - **Field Type**: Text
    * - **Placeholder**: A title of the page used for social media and search engines
@@ -411,7 +423,7 @@ interface TextDocumentData {
   meta_title: prismic.KeyTextField;
 
   /**
-   * Meta Description field in *Text*
+   * Meta Description field in *Words*
    *
    * - **Field Type**: Text
    * - **Placeholder**: A brief summary of the page
@@ -422,7 +434,7 @@ interface TextDocumentData {
   meta_description: prismic.KeyTextField;
 
   /**
-   * Meta Image field in *Text*
+   * Meta Image field in *Words*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
@@ -434,7 +446,7 @@ interface TextDocumentData {
 }
 
 /**
- * Text document from Prismic
+ * Words document from Prismic
  *
  * - **API ID**: `text`
  * - **Repeatable**: `true`

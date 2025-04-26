@@ -1,7 +1,7 @@
 {
   "format": "page",
   "id": "text",
-  "label": "Text",
+  "label": "Words",
   "repeatable": true,
   "status": true,
   "json": {
@@ -50,6 +50,15 @@
           "label": "Featured Image",
           "constraint": {},
           "thumbnails": []
+        }
+      },
+      "text_is_chinese": {
+        "type": "Boolean",
+        "config": {
+          "label": "Text is Chinese",
+          "placeholder_false": "false",
+          "placeholder_true": "true",
+          "default_value": false
         }
       },
       "content": {
