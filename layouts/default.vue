@@ -1,6 +1,6 @@
 <template lang="pug">
-Header
-//- BouncyHeader
+Header(v-if="$route.path != '/'")
+BouncyHeader(v-if="$route.path === '/'")
 #layout.default.p-2.md_p-4.lg_container.lg_mx-auto
     //- .container.m-auto
     slot

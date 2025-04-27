@@ -1,28 +1,29 @@
 <template lang="pug">
-#header.mb-24
-    nuxt-link(to="../").w-1x8.fixed.left-2.bottom-2
+#header
+    nuxt-link(to="../").w-1x8.fixed.left-2.top-2.hover_opacity-75.home
         img(src='assets/images/penny_header.png')
-    #main-menu.flex.justify-between.text-center.fixed.w-full.p-4
-        .menu-item.px-3    
+    //- #main-menu.flex.justify-between.text-center.fixed.w-full.p-3
+    #main-menu.flex.flex-col.text-center.fixed.p-3.right-2.top-2.w-1x8
+        .menu-item.px-3.mb-6    
             nuxt-link(to="/words") 
                 img(src='assets/images/btn_words.svg')
-                .desc Words
-        .menu-item.px-3
-            nuxt-link(to="/wandering") 
-                img(src='assets/images/btn_wandering.svg')
-                .desc Wandering
-        .menu-item.px-3
+                .desc Embodied Writing
+        .menu-item.px-3.mb-6
             nuxt-link(to="/sound") 
                 img(src='assets/images/btn_sounds.svg')
                 .desc Sounds
-        .menu-item.px-3
+        .menu-item.px-3.mb-6
             nuxt-link(to="/senses") 
                 img(src='assets/images/btn_senses.svg')
-                .desc Senses
-        .menu-item.px-3
+                .desc Artistic Practice
+        .menu-item.px-3.mb-6
             nuxt-link(to="/dreams") 
                 img(src='assets/images/btn_dreams.svg')
-                .desc Dreams
+                .desc Poetry & Stories
+        .menu-item.px-3.mb-6
+            nuxt-link(to="/wandering") 
+                img(src='assets/images/btn_wandering.svg')
+                .desc About Me
         //- .menu-item.px-3
         //-     nuxt-link(to="/about").ueber Penny
 </template>
@@ -36,7 +37,9 @@ const { client } = usePrismic();
 #main-menu
     font-family: 'T'
     font-size: 1rem
-
+    z-index: 909
+.home
+    z-index: 909
 // .router-link-active, .menu-item:hover
 //     text-decoration: underline
 //     text-underline-offset: 6px
@@ -44,7 +47,7 @@ const { client } = usePrismic();
 //     text-decoration-thickness: 1.6px
 .menu-item 
     filter: blur(1px)
-    opacity: 0.2
+    opacity: 1
     transition: all 200ms ease-in-out
     filter: drop-shadow(0 0 20px #999)
     mix-blend-mode: difference
@@ -52,7 +55,7 @@ const { client } = usePrismic();
         text-decoration: none
         border: none
     img
-        height: 70px
+        height: 80px
         margin-bottom: .25rem
         mix-blend-mode: difference
     .desc

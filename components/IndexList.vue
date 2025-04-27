@@ -2,7 +2,7 @@
 #content-list.md_flex
     Sidebar(:tags="tags" @filter-changed="applyFilter" :contentType="contentType").md_w-1x6.top-2.left-2.h-screen.flex.flex-col.fixed.justify-center
     .spacer.w-1x5.text-white .
-    .items-container.w-full.flex.flex-wrap.md_3x6.lg_w-4x6
+    .items-container.w-full.flex.flex-wrap.md_3x6.lg_w-3x5
       .content-item.w-full.mb-8.sm_px-2.lg_px-4(v-for="item in filteredItems" :key="item.id")
           nuxt-link(:to="`/${contentType}/${item.uid}`")
             PrismicImage(v-if="item.data.featured_image" :field="item.data.featured_image").w-1x5.object-cover.absolute.right-0.featured_image

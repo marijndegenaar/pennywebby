@@ -1,7 +1,7 @@
 <template lang="pug">
 #sidebar.text-sm
-    .sidebar-item.capitalize.mx-2.md_mr-4.md_mb-1(v-for="tag in ['Alle', ...tags]" :key="tag").text-light-brown
-        label(:class="{ 'text-brown': selectedTags === tag || (tag === 'Alle' && selectedTags === '') }")
+    .sidebar-item.capitalize.mx-2.md_mr-4.md_mb-1(v-for="tag in ['Alle', ...tags]" :key="tag")
+        label(:class="{ 'active': selectedTags === tag || (tag === 'Alle' && selectedTags === '') }")
             input(type="checkbox" :value="tag" v-model="selectedTags" @change="updateFilter(tag)" ).hidden
             | {{ tag }}
 </template>
@@ -49,7 +49,9 @@ const tags = [...new Set(items.value.flatMap(item => item.tags.map(tag => tag.re
 <style lang="sass" scoped>
 @media (min-width: 768px)
     #sidebar label:hover 
-        color: #6E5F39
+        color: #b5b5b5
     #sidebar label
         cursor: pointer
+.active
+    color: #b5b5b5
 </style>

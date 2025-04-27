@@ -7,11 +7,11 @@ type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 type AboutDocumentDataSlicesSlice = never;
 
 /**
- * Content for Über documents
+ * Content for About documents
  */
 interface AboutDocumentData {
   /**
-   * Content field in *Über*
+   * Content field in *About*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
@@ -22,7 +22,7 @@ interface AboutDocumentData {
   content: prismic.RichTextField;
 
   /**
-   * Foto field in *Über*
+   * Foto field in *About*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
@@ -33,7 +33,7 @@ interface AboutDocumentData {
   photo: prismic.ImageField<never>;
 
   /**
-   * Slice Zone field in *Über*
+   * Slice Zone field in *About*
    *
    * - **Field Type**: Slice Zone
    * - **Placeholder**: *None*
@@ -42,7 +42,7 @@ interface AboutDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#slices
    */
   slices: prismic.SliceZone<AboutDocumentDataSlicesSlice> /**
-   * Meta Title field in *Über*
+   * Meta Title field in *About*
    *
    * - **Field Type**: Text
    * - **Placeholder**: A title of the page used for social media and search engines
@@ -53,7 +53,7 @@ interface AboutDocumentData {
   meta_title: prismic.KeyTextField;
 
   /**
-   * Meta Description field in *Über*
+   * Meta Description field in *About*
    *
    * - **Field Type**: Text
    * - **Placeholder**: A brief summary of the page
@@ -64,7 +64,7 @@ interface AboutDocumentData {
   meta_description: prismic.KeyTextField;
 
   /**
-   * Meta Image field in *Über*
+   * Meta Image field in *About*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
@@ -76,7 +76,7 @@ interface AboutDocumentData {
 }
 
 /**
- * Über document from Prismic
+ * About document from Prismic
  *
  * - **API ID**: `about`
  * - **Repeatable**: `false`
@@ -263,6 +263,84 @@ type SensesDocumentDataSlicesSlice = never;
  * Content for Senses documents
  */
 interface SensesDocumentData {
+  /**
+   * Publishing Date field in *Senses*
+   *
+   * - **Field Type**: Date
+   * - **Placeholder**: *None*
+   * - **API ID Path**: senses.date
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#date
+   */
+  date: prismic.DateField;
+
+  /**
+   * Title field in *Senses*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: senses.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Subtitle field in *Senses*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: senses.subtitle
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  subtitle: prismic.KeyTextField;
+
+  /**
+   * URL field in *Senses*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: senses.url
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  url: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+
+  /**
+   * Featured Image field in *Senses*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: senses.featured_image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  featured_image: prismic.ImageField<never>;
+
+  /**
+   * Text is Chinese field in *Senses*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: senses.text_is_chinese
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#boolean
+   */
+  text_is_chinese: prismic.BooleanField;
+
+  /**
+   * Content field in *Senses*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: senses.content
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  content: prismic.RichTextField;
+
   /**
    * Slice Zone field in *Senses*
    *

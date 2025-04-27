@@ -1,7 +1,7 @@
 {
   "format": "page",
   "id": "about",
-  "label": "Über",
+  "label": "About",
   "repeatable": false,
   "status": true,
   "json": {
