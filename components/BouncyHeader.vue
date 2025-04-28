@@ -1,9 +1,6 @@
 <template lang="pug">
 nuxt-link(to="../").w-1x8.fixed.left-2.top-2.z-10.hover_opacity-75.cursor-pointer.home
   img(:src='headerLogo')
-//- .right-2.top-2.fixed.z-10.cursor-pointer.hover_opacity-50(@click="openMenu = !openMenu") 
-  span(v-if="!openMenu") menu
-  span(v-if="openMenu") close
 #bouncy-menu.w-screen.h-screen.z-9.relative.overflow-hidden(v-if = "openMenu")
     .menu-item.text-center(
       v-for="(item, index) in menuItems" 
@@ -18,22 +15,18 @@ nuxt-link(to="../").w-1x8.fixed.left-2.top-2.z-10.hover_opacity-75.cursor-pointe
 <script setup>
 import { ref, onMounted } from 'vue';
 
-// Import images properly to ensure they're bundled with the build
-import headerLogo from '@/assets/images/penny_header.png';
-import btnWords from '@/assets/images/btn_words.svg';
-import btnWandering from '@/assets/images/btn_wandering.svg';
-import btnSounds from '@/assets/images/btn_sounds.svg';
-import btnSenses from '@/assets/images/btn_senses.svg';
-import btnDreams from '@/assets/images/btn_dreams.svg';
+// Use absolute paths from the public directory
+const headerLogo = '/images/penny_header.png';
 
 const openMenu = ref(true);
 
+// Use absolute paths that reference the public directory
 const menuItems = ref([
-  { route: '/words', icon: btnWords, text: 'Embodied Writing', x: 0, y: 0, dx: 0, dy: 0, size: 180 },
-  { route: '/wandering', icon: btnWandering, text: 'About me', x: 0, y: 0, dx: 0, dy: 0, size: 180 },
-  { route: '/sound', icon: btnSounds, text: 'Sounds', x: 0, y: 0, dx: 0, dy: 0, size: 180 },
-  { route: '/senses', icon: btnSenses, text: 'Artistic Practice', x: 0, y: 0, dx: 0, dy: 0, size: 180 },
-  { route: '/dreams', icon: btnDreams, text: 'Poetry & Stories', x: 0, y: 0, dx: 0, dy: 0, size: 180 },
+  { route: '/words', icon: '/images/btn_words.svg', text: 'Embodied Writing', x: 0, y: 0, dx: 0, dy: 0, size: 180 },
+  { route: '/wandering', icon: '/images/btn_wandering.svg', text: 'About me', x: 0, y: 0, dx: 0, dy: 0, size: 180 },
+  { route: '/sound', icon: '/images/btn_sounds.svg', text: 'Sounds', x: 0, y: 0, dx: 0, dy: 0, size: 180 },
+  { route: '/senses', icon: '/images/btn_senses.svg', text: 'Artistic Practice', x: 0, y: 0, dx: 0, dy: 0, size: 180 },
+  { route: '/dreams', icon: '/images/btn_dreams.svg', text: 'Poetry & Stories', x: 0, y: 0, dx: 0, dy: 0, size: 180 },
 ]);
 
 // Collision detection function
