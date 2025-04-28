@@ -1,6 +1,5 @@
 <template lang="pug">
     IndexList(contentType="sound")
-    h1 Sound
 </template>
 
 <script setup>
