@@ -87,7 +87,7 @@ interface AboutDocumentData {
 export type AboutDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithoutUID<Simplify<AboutDocumentData>, "about", Lang>;
 
-type DreamsDocumentDataSlicesSlice = never;
+type DreamsDocumentDataSlicesSlice = GallerySlice;
 
 /**
  * Content for Dreams documents
@@ -105,6 +105,28 @@ interface DreamsDocumentData {
   title: prismic.KeyTextField;
 
   /**
+   * Subtitle field in *Dreams*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: dreams.subtitle
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  subtitle: prismic.KeyTextField;
+
+  /**
+   * Featured Image field in *Dreams*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: dreams.featured_image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  featured_image: prismic.ImageField<never>;
+
+  /**
    * Publishing date field in *Dreams*
    *
    * - **Field Type**: Date
@@ -114,6 +136,18 @@ interface DreamsDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#date
    */
   date: prismic.DateField;
+
+  /**
+   * Text is Chinese field in *Dreams*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: dreams.text_is_chinese
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#boolean
+   */
+  text_is_chinese: prismic.BooleanField;
 
   /**
    * Content field in *Dreams*
@@ -257,7 +291,7 @@ export type HomepageDocument<Lang extends string = string> =
     Lang
   >;
 
-type SensesDocumentDataSlicesSlice = never;
+type SensesDocumentDataSlicesSlice = GallerySlice;
 
 /**
  * Content for Senses documents
@@ -396,7 +430,7 @@ interface SensesDocumentData {
 export type SensesDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<SensesDocumentData>, "senses", Lang>;
 
-type TextDocumentDataSlicesSlice = ArticleSlice;
+type TextDocumentDataSlicesSlice = GallerySlice;
 
 /**
  * Content for Words documents

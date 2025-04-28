@@ -75,7 +75,7 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
-            "article": {
+            "gallery": {
               "type": "SharedSlice"
             }
           }
