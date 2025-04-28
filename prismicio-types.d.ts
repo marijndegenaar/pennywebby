@@ -11,6 +11,17 @@ type AboutDocumentDataSlicesSlice = never;
  */
 interface AboutDocumentData {
   /**
+   * Foto field in *About*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.photo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  photo: prismic.ImageField<never>;
+
+  /**
    * Content field in *About*
    *
    * - **Field Type**: Rich Text
@@ -22,15 +33,15 @@ interface AboutDocumentData {
   content: prismic.RichTextField;
 
   /**
-   * Foto field in *About*
+   * Chinese content field in *About*
    *
-   * - **Field Type**: Image
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: about.photo
+   * - **API ID Path**: about.chinese_content
    * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#image
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  photo: prismic.ImageField<never>;
+  chinese_content: prismic.RichTextField;
 
   /**
    * Slice Zone field in *About*

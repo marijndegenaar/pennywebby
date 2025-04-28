@@ -6,6 +6,14 @@
   "status": true,
   "json": {
     "Main": {
+      "photo": {
+        "type": "Image",
+        "config": {
+          "label": "Foto",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
       "content": {
         "type": "StructuredText",
         "config": {
@@ -15,12 +23,13 @@
           "multi": "paragraph,strong,em,hyperlink,image,heading3,list-item"
         }
       },
-      "photo": {
-        "type": "Image",
+      "chinese_content": {
+        "type": "StructuredText",
         "config": {
-          "label": "Foto",
-          "constraint": {},
-          "thumbnails": []
+          "label": "Chinese content",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,heading3,strong,em,hyperlink,image,embed,list-item,o-list-item"
         }
       },
       "slices": {
