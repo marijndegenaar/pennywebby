@@ -9,7 +9,7 @@
                 img(src='assets/images/btn_words.svg')
                 .desc Embodied Writing
         .menu-item.px-3.mb-6
-            nuxt-link(to="/sound") 
+            nuxt-link(to="/sounds") 
                 img(src='assets/images/btn_sounds.svg')
                 .desc Sounds
         .menu-item.px-3.mb-6

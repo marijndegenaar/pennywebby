@@ -441,6 +441,133 @@ interface SensesDocumentData {
 export type SensesDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<SensesDocumentData>, "senses", Lang>;
 
+type SoundsDocumentDataSlicesSlice = GallerySlice;
+
+/**
+ * Content for Sounds documents
+ */
+interface SoundsDocumentData {
+  /**
+   * Title field in *Sounds*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: sounds.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Subtitle field in *Sounds*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: sounds.subtitle
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  subtitle: prismic.KeyTextField;
+
+  /**
+   * Publishing Date field in *Sounds*
+   *
+   * - **Field Type**: Date
+   * - **Placeholder**: *None*
+   * - **API ID Path**: sounds.publishing_date
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#date
+   */
+  publishing_date: prismic.DateField;
+
+  /**
+   * Url field in *Sounds*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: sounds.url
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  url: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+
+  /**
+   * Featured Image field in *Sounds*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: sounds.featured_image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  featured_image: prismic.ImageField<never>;
+
+  /**
+   * Content field in *Sounds*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: sounds.content
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  content: prismic.RichTextField;
+
+  /**
+   * Slice Zone field in *Sounds*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: sounds.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<SoundsDocumentDataSlicesSlice> /**
+   * Meta Title field in *Sounds*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: sounds.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *Sounds*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: sounds.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *Sounds*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: sounds.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * Sounds document from Prismic
+ *
+ * - **API ID**: `sounds`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type SoundsDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<Simplify<SoundsDocumentData>, "sounds", Lang>;
+
 type TextDocumentDataSlicesSlice = GallerySlice;
 
 /**
@@ -585,6 +712,7 @@ export type AllDocumentTypes =
   | DreamsDocument
   | HomepageDocument
   | SensesDocument
+  | SoundsDocument
   | TextDocument;
 
 /**
@@ -756,6 +884,9 @@ declare module "@prismicio/client" {
       SensesDocument,
       SensesDocumentData,
       SensesDocumentDataSlicesSlice,
+      SoundsDocument,
+      SoundsDocumentData,
+      SoundsDocumentDataSlicesSlice,
       TextDocument,
       TextDocumentData,
       TextDocumentDataSlicesSlice,
