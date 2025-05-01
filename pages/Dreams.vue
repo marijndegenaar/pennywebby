@@ -1,5 +1,4 @@
 <template lang="pug">
-    h1 Dreams
     IndexList(contentType="dreams")
 </template>
 
