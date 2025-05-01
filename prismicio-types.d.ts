@@ -127,17 +127,6 @@ interface DreamsDocumentData {
   subtitle: prismic.KeyTextField;
 
   /**
-   * Featured Image field in *Dreams*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: dreams.featured_image
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  featured_image: prismic.ImageField<never>;
-
-  /**
    * Publishing date field in *Dreams*
    *
    * - **Field Type**: Date
@@ -147,6 +136,28 @@ interface DreamsDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#date
    */
   date: prismic.DateField;
+
+  /**
+   * URL field in *Dreams*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: dreams.url
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  url: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+
+  /**
+   * Featured Image field in *Dreams*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: dreams.featured_image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  featured_image: prismic.ImageField<never>;
 
   /**
    * Text is Chinese field in *Dreams*

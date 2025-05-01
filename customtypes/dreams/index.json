@@ -26,19 +26,30 @@
           "placeholder": ""
         }
       },
+      "date": {
+        "type": "Date",
+        "config": {
+          "label": "Publishing date",
+          "placeholder": ""
+        }
+      },
+      "url": {
+        "type": "Link",
+        "config": {
+          "label": "URL",
+          "placeholder": "",
+          "select": null,
+          "allowTargetBlank": true,
+          "allowText": true,
+          "repeat": false
+        }
+      },
       "featured_image": {
         "type": "Image",
         "config": {
           "label": "Featured Image",
           "constraint": {},
           "thumbnails": []
-        }
-      },
-      "date": {
-        "type": "Date",
-        "config": {
-          "label": "Publishing date",
-          "placeholder": ""
         }
       },
       "text_is_chinese": {

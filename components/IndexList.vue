@@ -18,7 +18,7 @@
 const { client } = usePrismic();
 
 const props = defineProps({
-    contentType: String, // Either 'fotografie' or 'text'
+    contentType: String,
 });
 
 const tags = ref([])
