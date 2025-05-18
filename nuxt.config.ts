@@ -12,6 +12,7 @@ export default defineNuxtConfig({
     '@nuxtjs/google-fonts'
   ],
 
+
   googleFonts: {
     families: {
       'Noto Serif SC': {

@@ -791,31 +791,11 @@ export interface GallerySliceDefaultPrimaryGalleryItem {
  */
 export interface GallerySliceDefaultPrimary {
   /**
-   * Name field in *Gallery → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: gallery.default.primary.name
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  name: prismic.KeyTextField;
-
-  /**
-   * Beschreibung field in *Gallery → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: gallery.default.primary.description
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  description: prismic.KeyTextField;
-
-  /**
-   * Als Diashow anzeigen field in *Gallery → Default → Primary*
+   * Show as slideshow field in *Gallery → Default → Primary*
    *
    * - **Field Type**: Boolean
    * - **Placeholder**: *None*
-   * - **Default Value**: false
+   * - **Default Value**: true
    * - **API ID Path**: gallery.default.primary.slideshow
    * - **Documentation**: https://prismic.io/docs/field#boolean
    */

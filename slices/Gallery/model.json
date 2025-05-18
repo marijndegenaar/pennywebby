@@ -12,27 +12,13 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
-        "name": {
-          "type": "Text",
-          "config": {
-            "label": "Name",
-            "placeholder": ""
-          }
-        },
-        "description": {
-          "type": "Text",
-          "config": {
-            "label": "Beschreibung",
-            "placeholder": ""
-          }
-        },
         "slideshow": {
           "type": "Boolean",
           "config": {
-            "label": "Als Diashow anzeigen",
-            "placeholder_false": "Die Bilder werden als Liste angezeigt",
-            "placeholder_true": "Die Bilder werden als Diashow angezeigt",
-            "default_value": false
+            "label": "Show as slideshow",
+            "placeholder_false": "Show as list",
+            "placeholder_true": "Show as slidehow",
+            "default_value": true
           }
         },
         "gallery": {

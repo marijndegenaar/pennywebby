@@ -4,7 +4,9 @@ module.exports = {
     extend: {
       colors: {
         'brown': '#6E5F39',
-        'light-brown': '#6E5F3950'
+        'light-brown': '#6E5F3950',
+        'grey': '#f4f4f4',
+        'gray': '#f4f4f4'
       },
       scale: {
         '200': '2',

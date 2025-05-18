@@ -14,10 +14,10 @@
       img(:src="item.image.url" :alt="item.image.alt").h-full.object-contain
       .caption.text-xs.pt-1.text-right.opacity-40 {{ item.image.alt}}
 
-  .gallery-info.mb-32
-    .md_flex
-      h1.md_w-1x3.mb-2.font-medium(v-if="slice.primary.name") {{ slice.primary.name }}
-      p.text-base.md_w-2x3(v-if="slice.primary.description") {{ slice.primary.description }}
+  //- .gallery-info.mb-32
+  //-   .md_flex
+  //-     h1.md_w-1x3.mb-2.font-medium(v-if="slice.primary.name") {{ slice.primary.name }}
+  //-     p.text-base.md_w-2x3(v-if="slice.primary.description") {{ slice.primary.description }}
 </template>
 
 <script setup lang="ts">

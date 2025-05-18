@@ -1,15 +1,23 @@
 <template lang="pug">
-nuxt-link(to="../").w-1x8.fixed.left-2.top-2.z-10.hover_opacity-75.cursor-pointer.home
+nuxt-link(to="../").w-1x2.md_w-1x8.fixed.left-2.top-2.z-10.hover_opacity-75.cursor-pointer.home
   img(:src='headerLogo')
-#bouncy-menu.w-screen.h-screen.z-9.relative.overflow-hidden(v-if = "openMenu")
+#mobile-menu.md_hidden
+  .mobile-menu-item.text-center(
+      v-for="(item, index) in menuItems" 
+      :key="index" 
+    )    
+      nuxt-link(:to="item.route") 
+          img(:src="item.icon")
+          .desc {{ item.text }}
+#bouncy-menu.w-screen.h-screen.z-9.relative.overflow-hidden.hidden.md_block(v-if = "openMenu")
     .menu-item.text-center(
       v-for="(item, index) in menuItems" 
       :key="index" 
       :style="getItemStyle(item)"
     )    
-        nuxt-link(:to="item.route") 
-            img(:src="item.icon")
-            .desc {{ item.text }}
+      nuxt-link(:to="item.route") 
+          img(:src="item.icon")
+          .desc {{ item.text }}
 </template>
 
 <script setup>
@@ -130,6 +138,8 @@ const animate = () => {
 <style lang="sass" scoped>
 .home 
   // z-index: 909
+#mobile-menu
+  z-index: 909
 #bouncy-menu
   position: fixed
   top: 0

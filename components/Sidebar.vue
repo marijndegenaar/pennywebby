@@ -1,6 +1,6 @@
 <template lang="pug">
 #sidebar.text-sm
-    .sidebar-item.capitalize.mx-2.md_mr-4.md_mb-1(v-for="tag in ['Alle', ...tags]" :key="tag")
+    .sidebar-item.capitalize.mr-1.md_mr-4.mb-1.bg-grey.md_bg-transparent.rounded-xl.px-3.py-1.text-xs(v-for="tag in ['Alle', ...tags]" :key="tag")
         label(:class="{ 'active': selectedTags === tag || (tag === 'Alle' && selectedTags === '') }")
             input(type="checkbox" :value="tag" v-model="selectedTags" @change="updateFilter(tag)" ).hidden
             | {{ tag }}

@@ -39,16 +39,6 @@
 					}
 				]
 			},
-			"name": {
-				"__TYPE__": "FieldContent",
-				"value": "satisfied",
-				"type": "Text"
-			},
-			"description": {
-				"__TYPE__": "FieldContent",
-				"value": "part",
-				"type": "Text"
-			},
 			"slideshow": {
 				"__TYPE__": "BooleanContent",
 				"value": false

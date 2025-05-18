@@ -1,7 +1,7 @@
 <template lang="pug">
   //- pre {{ page.data }}
   .md_flex
-    NuxtLink(to="../words").md_w-1x6.text-sm.pt-2.hover_text-light-brown.mb-2.block.sticky.top-36.max-h-screen ← Back
+    NuxtLink(:to="contentType === 'text' ? '/words' : './'").md_w-1x6.text-sm.pt-2.hover_text-light-brown.mb-2.block.sticky.top-36.max-h-screen ← Back
     .md_w-4x6
       .post-header.mb-8.text-center.flex.flex-col.items-center
         img(v-if="page.data.featured_image.url" :src="page.data.featured_image.url").w-2x3.mb-6
@@ -12,7 +12,7 @@
       .post-content(:lang="page.data.text_is_chinese ? 'ch' : ''")
         //- pre {{ page.data.text_is_chinese }}
         PrismicRichText(:field="page.data.content")
-        //- SliceZone(wrapper="main", :slices="page?.data.slices ?? []", :components="components")
+        SliceZone(wrapper="main", :slices="page?.data.slices ?? []", :components="components")
 </template>
 <script setup lang="ts">
 import { components } from "~/slices";
