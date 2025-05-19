@@ -1,14 +1,15 @@
 <template lang="pug">
-nuxt-link(to="../").w-1x2.md_w-1x8.fixed.left-2.top-2.z-10.hover_opacity-75.cursor-pointer.home
-  img(:src='headerLogo')
-#mobile-menu.md_hidden
-  .mobile-menu-item.text-center(
+nuxt-link(to="../").w-2x3.md_w-1x8.fixed.left-2.top-2.z-10.hover_opacity-75.cursor-pointer.home
+  img(:src='headerLogo').hidden.md_block
+  img(src='assets/images/penny_header_mobile.png').md_hidden
+#mobile-menu.md_hidden.flex.flex-col.items-center.space-between.h-screen.pt-24
+  .mobile-menu-item.text-center.w-1x2.p-4(
       v-for="(item, index) in menuItems" 
       :key="index" 
     )    
-      nuxt-link(:to="item.route") 
-          img(:src="item.icon")
-          .desc {{ item.text }}
+      nuxt-link(:to="item.route")
+          img.w-full(:src="item.icon")
+          .desc.text-sm.mt-2 {{ item.text }}
 #bouncy-menu.w-screen.h-screen.z-9.relative.overflow-hidden.hidden.md_block(v-if = "openMenu")
     .menu-item.text-center(
       v-for="(item, index) in menuItems" 

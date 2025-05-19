@@ -1,5 +1,5 @@
 <template lang="pug">
-  .md_flex
+  .md_flex.mt-6
     NuxtLink(to=".").md_w-1x6.md_pt-2.text-sm.hover_text-light-brown.block.mb-4.sticky.top-5.max-h-screen ← Züruck
     .md_w-4x6(v-if="page.data")
       .page-header.mb-6.md_w-5x6(v-if="page?.data.title")

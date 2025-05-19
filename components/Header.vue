@@ -1,30 +1,30 @@
 <template lang="pug">
 #header
-    nuxt-link(to="../").w-1x2.md_w-1x8.fixed.left-2.top-2.hover_opacity-75.home
+    nuxt-link(to="../").w-1x2.md_w-1x8.fixed.left-2.top-2.md_hover_opacity-75.home
         img(src='assets/images/penny_header_mobile.png').md_hidden
         img(src='assets/images/penny_header.png').hidden.md_block
     //- #main-menu.flex.justify-between.text-center.fixed.w-full.p-3
     #menu-toggle.text-sm.md_hidden.fixed.right-2.top-6(@click="toggleMenu" :class="{ 'active': isMenuOpen }") {{ isMenuOpen ? 'Close' : 'Menu' }}
-    #main-menu.flex.flex-col.text-center.fixed.p-3.right-2.top-2.bg-white.md_bg-transparent.h-screen.w-full.md_w-1x8.items-center(:class="{ 'hidden': !isMenuOpen }").md_block
-        .menu-item.px-3.mb-6.w-1x2.md_w-full
+    #main-menu.flex.flex-col.text-center.fixed.p-3.right-0.top-0.bg-white.md_bg-transparent.h-screen.w-full.md_w-1x8.items-center(:class="{ 'hidden': !isMenuOpen }").md_block
+        .menu-item.md_mb-6.md_w-full.mt-20
             nuxt-link(to="/words" @click="closeMenu") 
-                img(src='assets/images/btn_words.svg')
+                img.h-16(src='assets/images/btn_words.svg')
                 .desc Embodied Writing
-        .menu-item.px-3.mb-6.w-1x2.md_w-full
+        .menu-item.md_mb-6.md_w-full
             nuxt-link(to="/sounds" @click="closeMenu") 
-                img(src='assets/images/btn_sounds.svg')
+                img.h-16(src='assets/images/btn_sounds.svg')
                 .desc Sounds
-        .menu-item.px-3.mb-6.w-1x2.md_w-full
+        .menu-item.md_mb-6.md_w-full
             nuxt-link(to="/senses" @click="closeMenu") 
-                img(src='assets/images/btn_senses.svg')
+                img.h-16(src='assets/images/btn_senses.svg')
                 .desc Artistic Practice
-        .menu-item.px-3.mb-6.w-1x2.md_w-full
+        .menu-item.md_mb-6.md_w-full
             nuxt-link(to="/dreams" @click="closeMenu") 
-                img(src='assets/images/btn_dreams.svg')
+                img.h-16(src='assets/images/btn_dreams.svg')
                 .desc Poetry & Stories
-        .menu-item.px-3.mb-6.w-1x2.md_w-full
+        .menu-item.md_mb-6.md_w-full
             nuxt-link(to="/wandering" @click="closeMenu") 
-                img(src='assets/images/btn_wandering.svg')
+                img.h-16(src='assets/images/btn_wandering.svg')
                 .desc About Me
         //- .menu-item.px-3
         //-     nuxt-link(to="/about").ueber Penny
@@ -47,7 +47,6 @@ const closeMenu = () => {
 #main-menu
     font-family: 'T'
     font-size: 1rem
-    z-index: 909
 .home
     z-index: 909
 // .router-link-active, .menu-item:hover
@@ -60,7 +59,7 @@ const closeMenu = () => {
     opacity: 1
     transition: all 200ms ease-in-out
     // filter: drop-shadow(0 0 20px #999)
-    mix-blend-mode: difference
+    // mix-blend-mode: difference
     a:hover
         text-decoration: none
         border: none
@@ -68,8 +67,10 @@ const closeMenu = () => {
         width: 100%
         mix-blend-mode: difference
     .desc
-        opacity: 0
+        margin: .5rem 0 1rem
         font-size: .75rem
+        @media (min-width: 768px)
+            opacity: 0
     &:hover
         opacity: 1
         filter: blur(0)
@@ -91,6 +92,6 @@ const closeMenu = () => {
 #menu-toggle
     cursor: pointer
     z-index: 910
-    &.active
-        color: #6E5F39
+    // &.active
+    //     color: #6E5F39
 </style>

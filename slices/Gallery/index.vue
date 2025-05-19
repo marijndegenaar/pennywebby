@@ -8,7 +8,6 @@
       template(#addons='{ slidesCount }')
         Navigation(v-if="slidesCount > 1").hidden.md_block
   
-  
   .gallery-list(v-if="slice.primary.slideshow ==!true | !slice.primary.slideshow")
     .image(v-for="item in slice.primary.gallery" :key="item.id").mb-32.last_mb-4
       img(:src="item.image.url" :alt="item.image.alt").h-full.object-contain
