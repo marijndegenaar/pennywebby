@@ -5,7 +5,7 @@
     .items-container.w-full.flex.flex-wrap.md_3x6.lg_w-3x5
       .content-item.w-full.mb-8.sm_px-2.lg_px-4(v-for="item in filteredItems" :key="item.id")
           nuxt-link(:to="`/${contentType}/${item.uid}`")
-            PrismicImage(v-if="item.data.featured_image" :field="item.data.featured_image").w-1x5.object-cover.absolute.right-0.featured_image
+            PrismicImage(v-if="item.data.featured_image" :field="item.data.featured_image").hidden.md_block.w-1x5.object-cover.absolute.right-0.featured_image
           nuxt-link(:to="item.data.url.url ? item.data.url.url : `/${contentType}/${item.uid}`" :target="item.data.url.target" )
             h2.text-xl.mt-1.leading-none.md_leading-normal.mb-2.md_mb-1 
               span.title {{ item.data.title }}
@@ -69,9 +69,10 @@ a:hover h2 span.title
   transition: all 0.5s ease-out
   .featured_image
     display: none
-  &:hover
-    .featured_image
-      display: block
+  @media (min-width: 768px)
+    &:hover
+      .featured_image
+        display: block
     // .link-text  
     //   display: none
     // .link-url
