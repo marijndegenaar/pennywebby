@@ -7,11 +7,15 @@
           nuxt-link(:to="`/${contentType}/${item.uid}`")
             PrismicImage(v-if="item.data.featured_image" :field="item.data.featured_image").hidden.md_block.w-1x5.object-cover.absolute.right-0.featured_image
           nuxt-link(:to="item.data.url.url ? item.data.url.url : `/${contentType}/${item.uid}`" :target="item.data.url.target" )
-            h2.text-xl.mt-1.leading-none.md_leading-normal.mb-2.md_mb-1 
+            h2.text-xl.mt-1.leading-none.md_leading-normal.mb-2.md_mb-2 
               span.title {{ item.data.title }}
               .link-text.inline.ml-2.text-xs(v-if="item.data.url.url") 🔗  {{ item.data.url.text }}
               .link-url.inline.ml-2.text-xs.hidden(v-if="item.data.url.url") 🔗 {{ item.data.url.url }}
-            .subtitle.text-sm {{ new Date(item.data.date).getFullYear() }} — {{ item.data.subtitle }}
+            .subtitle.text-sm 
+              span(v-if="item.data.date") {{ new Date(item.data.date).getFullYear() }} — 
+              span {{ item.data.subtitle }}
+
+            
 </template>
 
 <script setup>

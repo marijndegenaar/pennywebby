@@ -1,11 +1,12 @@
 <template lang="pug">
   //- pre {{ page.data }}
   .md_flex.mt-14
-    NuxtLink(:to="contentType === 'text' ? '/words' : './'").md_w-1x6.text-sm.pt-2.hover_text-light-brown.mb-2.block.md_sticky.md_top-36.max-h-screen ← Back
+    NuxtLink(:to="contentType === 'text' ? '/words' : './'").md_w-1x6.text-sm.pt-2.hover_text-light-brown.mb-2.block.md_fixed.md_top-36.max-h-screen ← Back
+    .spacer.w-1x6.text-white.hidden.md_block .
     .md_w-4x6
       .post-header.mb-8.text-center.flex.flex-col.items-center
         img(v-if="page.data.featured_image.url" :src="page.data.featured_image.url").w-full.md_w-2x3.mb-6
-        h1.text-xxl.leading-none.mb-2.md_leading-normal.md_mb-1
+        h1.text-xxl.leading-none.mb-2.md_leading-tight.md_mb-4
           .title   {{ page.data.title }}
         .subtitle.text-sm {{ new Date(page.data.date).getFullYear() }} — {{ page.data.subtitle }}
         //- .date.text-sm.mt-1.text-light-brown 

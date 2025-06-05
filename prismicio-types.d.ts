@@ -485,11 +485,11 @@ interface SoundsDocumentData {
    *
    * - **Field Type**: Date
    * - **Placeholder**: *None*
-   * - **API ID Path**: sounds.publishing_date
+   * - **API ID Path**: sounds.date
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#date
    */
-  publishing_date: prismic.DateField;
+  date: prismic.DateField;
 
   /**
    * Url field in *Sounds*

@@ -32,10 +32,11 @@ const openMenu = ref(true);
 // Use absolute paths that reference the public directory
 const menuItems = ref([
   { route: '/words', icon: '/images/btn_words.svg', text: 'Embodied Writing', x: 0, y: 0, dx: 0, dy: 0, size: 180 },
-  { route: '/wandering', icon: '/images/btn_wandering.svg', text: 'About me', x: 0, y: 0, dx: 0, dy: 0, size: 180 },
   { route: '/sounds', icon: '/images/btn_sounds.svg', text: 'Sounds', x: 0, y: 0, dx: 0, dy: 0, size: 180 },
   { route: '/senses', icon: '/images/btn_senses.svg', text: 'Artistic Practice', x: 0, y: 0, dx: 0, dy: 0, size: 180 },
   { route: '/dreams', icon: '/images/btn_dreams.svg', text: 'Poetry & Stories', x: 0, y: 0, dx: 0, dy: 0, size: 180 },
+  { route: '/wandering', icon: '/images/btn_wandering.svg', text: 'About me', x: 0, y: 0, dx: 0, dy: 0, size: 180 },
+  
 ]);
 
 // Collision detection function
