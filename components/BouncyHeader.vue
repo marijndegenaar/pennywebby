@@ -36,7 +36,8 @@ const menuItems = ref([
   { route: '/senses', icon: '/images/btn_senses.svg', text: 'Artistic Practice', x: 0, y: 0, dx: 0, dy: 0, size: 180 },
   { route: '/dreams', icon: '/images/btn_dreams.svg', text: 'Poetry & Stories', x: 0, y: 0, dx: 0, dy: 0, size: 180 },
   { route: '/wandering', icon: '/images/btn_wandering.svg', text: 'About me', x: 0, y: 0, dx: 0, dy: 0, size: 180 },
-  { route: 'https://www.instagram.com/purrrplegreen/', icon: '/images/btn_purplegreen.svg', text: 'Purple Green', x: 0, y: 0, dx: 0, dy: 0, size: 180 },
+  { route: '/purplegreen', icon: '/images/btn_purplegreen.svg', text: 'Purple Green', x: 0, y: 0, dx: 0, dy: 0, size: 220 },
+  { route: '/teaching', icon: '/images/btn_teaching.svg', text: 'Teaching', x: 0, y: 0, dx: 0, dy: 0, size: 180 },
   
 ]);
 
