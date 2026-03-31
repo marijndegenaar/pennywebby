@@ -31,6 +31,10 @@ const contentType = computed(() => {
     return 'sounds';
   } else if (route.path.startsWith('/dreams')) {
     return 'dreams';
+  } else if (route.path.startsWith('/radio')) {
+    return 'radio';
+  } else if (route.path.startsWith('/teaching')) {
+    return 'teaching';
   } else {
     return 'text'; // fallback
   }
