@@ -729,11 +729,11 @@ interface TeachingDocumentData {
    *
    * - **Field Type**: Date
    * - **Placeholder**: *None*
-   * - **API ID Path**: teaching.publication_date
+   * - **API ID Path**: teaching.date
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#date
    */
-  publication_date: prismic.DateField;
+  date: prismic.DateField;
 
   /**
    * Title field in *Teaching*

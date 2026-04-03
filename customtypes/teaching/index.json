@@ -12,7 +12,7 @@
           "label": "UID"
         }
       },
-      "publication_date": {
+      "date": {
         "type": "Date",
         "config": {
           "label": "Publication Date",
